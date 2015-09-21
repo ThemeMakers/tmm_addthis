@@ -5,7 +5,7 @@
   Plugin URI: http://webtemplatemasters.com
   Description: ThemeMakers WordPress AddThis Share
   Author: ThemeMakers
-  Version: 1.0.2
+  Version: 1.0.3
   Author URI: http://themeforest.net/user/ThemeMakers
  */
 
@@ -229,7 +229,7 @@ if (!class_exists('TMM_AddThis_Controller')) {
 		            <?php
 		        }
 	        } else if (get_post_type() === TMM_Ext_PostType_Car::$slug) {
-		        $thumb_src = TMM_Ext_PostType_Car::get_car_cover_image($post->ID, 'thumb');
+		        $thumb_src = tmm_get_car_cover_image($post->ID, 'thumb');
 		        ?>
 		        <meta property="og:url"                content="<?php the_permalink() ?>" />
 		        <meta property="og:type"               content="article" />
