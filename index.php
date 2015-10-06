@@ -93,7 +93,7 @@ if (!class_exists('TMM_AddThis_Controller')) {
 
 	        }
 
-	        if ($post_type === TMM_Ext_PostType_Car::$slug) {
+	        if (class_exists('TMM_Ext_PostType_Car') && $post_type === TMM_Ext_PostType_Car::$slug) {
 
 		        if (isset( $show_buttons['single_car'] ) && $show_buttons['single_car'] === '0') {
 			        return '';
@@ -228,7 +228,7 @@ if (!class_exists('TMM_AddThis_Controller')) {
 			        <meta property="og:image:height"       content="500" />
 		            <?php
 		        }
-	        } else if (get_post_type() === TMM_Ext_PostType_Car::$slug) {
+	        } else if (class_exists('TMM_Ext_PostType_Car') && get_post_type() === TMM_Ext_PostType_Car::$slug) {
 		        $thumb_src = tmm_get_car_cover_image($post->ID, 'thumb');
 		        ?>
 		        <meta property="og:url"                content="<?php the_permalink() ?>" />
