@@ -5,7 +5,7 @@
   Plugin URI: http://webtemplatemasters.com
   Description: ThemeMakers WordPress AddThis Share
   Author: ThemeMakers
-  Version: 1.0.3
+  Version: 1.0.4
   Author URI: http://themeforest.net/user/ThemeMakers
  */
 
