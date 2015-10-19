@@ -1,12 +1,13 @@
 <?php
 
-/*
-  Plugin Name: ThemeMakers AddThis
-  Plugin URI: http://webtemplatemasters.com
-  Description: ThemeMakers WordPress AddThis Share
-  Author: ThemeMakers
-  Version: 1.0.4
-  Author URI: http://themeforest.net/user/ThemeMakers
+/**
+ * Plugin Name: ThemeMakers AddThis
+ * Plugin URI: http://webtemplatemasters.com
+ * Description: ThemeMakers WordPress AddThis Share
+ * Author: ThemeMakers
+ * Version: 1.0.4
+ * Author URI: http://themeforest.net/user/ThemeMakers
+ * Text Domain: tmm_addthis
  */
 
 if (!class_exists('TMM_AddThis_Controller')) {
@@ -56,9 +57,6 @@ if (!class_exists('TMM_AddThis_Controller')) {
             
             define('TMM_ADDTHIS_PREFIX', 'tmm_addthis_');
             define('TMM_ADDTHIS_DEF_PREFIX', 'thememakers_');
-
-            load_plugin_textdomain('tmm_addthis', false, self::get_application_path() . 'languages');
-                      
 
             $my_theme = wp_get_theme('cardealer');
             if (!$my_theme->exists()) {
@@ -255,9 +253,16 @@ include_once TMM_AddThis_Controller::get_application_path() . 'widget/addthis_wi
 
 add_action('init', array(new TMM_AddThis_Controller(), 'init'), 999);
 
-
 add_action( 'widgets_init', array(new TMM_AddThis_Controller(), 'addthis_register_widgets'));
 
 add_action('admin_enqueue_scripts', array(new TMM_AddThis_Controller(), 'load_addthis_admin_style'));
 add_action('wp_enqueue_scripts', array(new TMM_AddThis_Controller(), 'enqueue_scripts'));
 
+/**
+ * Load plugin textdomain.
+ */
+function tmm_addthis_load_textdomain() {
+	load_plugin_textdomain( 'tmm_addthis', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
+}
+
+add_action( 'plugins_loaded', 'tmm_addthis_load_textdomain' );
