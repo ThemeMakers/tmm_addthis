@@ -58,11 +58,6 @@ if (!class_exists('TMM_AddThis_Controller')) {
             define('TMM_ADDTHIS_PREFIX', 'tmm_addthis_');
             define('TMM_ADDTHIS_DEF_PREFIX', 'thememakers_');
 
-            $my_theme = wp_get_theme('cardealer');
-            if (!$my_theme->exists()) {
-                add_action('admin_menu', array($this, 'admin_menu'));
-            }
-
             add_action('admin_notices', array($this, 'admin_notices'));
             add_action('wp_ajax_app_addthis_save_settings', array(__CLASS__, 'save_settings'));
 	        add_shortcode('tmm_addthis', array(__CLASS__, 'addthis_shortcode'));
@@ -120,20 +115,6 @@ if (!class_exists('TMM_AddThis_Controller')) {
             $notices = "";
 
             echo $notices;
-        }
-
-        public function admin_menu() {
-            $page_title = __('ThemeMakers AddThis', 'tmm_addthis');
-            $menu_title = __('ThemeMakers AddThis', 'tmm_addthis');
-            $capability = 'manage_options';
-            $menu_slug = 'tmm_addthis';
-            $function = array($this, 'draw_options_page');
-            add_management_page($page_title, $menu_title, $capability, $menu_slug, $function);
-        }
-
-        public function draw_options_page() {
-
-            echo $this->draw_html('options_page');
         }
 
         public function draw_html($view, $data = array()) {
@@ -266,3 +247,37 @@ function tmm_addthis_load_textdomain() {
 }
 
 add_action( 'plugins_loaded', 'tmm_addthis_load_textdomain' );
+
+/**
+ * Add Settings tab.
+ */
+function tmm_addthis_add_settings_tab() {
+	if ( current_user_can('manage_options') ) {
+		if (class_exists('TMM_OptionsHelper')) {
+
+			$content = array();
+			$tmpl_path = TMM_AddThis_Controller::get_application_path() . '/views/theme_options_tab.php';
+
+			$content[ 'tmm_addthis' ] = array(
+				'title' => '',
+				'type' => 'custom',
+				'custom_html' => TMM::draw_free_page($tmpl_path),
+				'show_title' => false
+			);
+
+			$sections = array(
+				'name' => __("Add This Share", 'tmm_addthis'),
+				'css_class' => 'shortcut-plugins',
+				'show_general_page' => true,
+				'content' => $content,
+				'child_sections' => array(),
+				'menu_icon' => 'dashicons-share'
+			);
+
+			TMM_OptionsHelper::$sections[ 'tmm_addthis' ] = $sections;
+
+		}
+	}
+}
+
+add_action( 'tmm_add_theme_options_tab', 'tmm_addthis_add_settings_tab', 90 );
