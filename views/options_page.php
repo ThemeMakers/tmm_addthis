@@ -13,7 +13,7 @@
             'title' => __('Large toolbox', 'tmm_addthis'),
             'description' => '',
             'css_class' => 'large_toolbox_above',
-                ), TMM_APP_CARDEALER_PREFIX);
+                ));
 
         TMM_OptionsHelper::draw_theme_option(array(
             'name_type' => 'array',
@@ -23,7 +23,7 @@
             'title' => __('Middle toolbox', 'tmm_addthis'),
             'description' => '',
             'css_class' => 'fb_tw_p1_sc_above',
-                ), TMM_APP_CARDEALER_PREFIX);
+                ));
 
         TMM_OptionsHelper::draw_theme_option(array(
             'name_type' => 'array',
@@ -33,7 +33,7 @@
             'title' => __('Small toolbox', 'tmm_addthis'),
             'description' => '',
             'css_class' => 'small_toolbox_above',
-                ), TMM_APP_CARDEALER_PREFIX);
+                ));
 
         TMM_OptionsHelper::draw_theme_option(array(
             'name_type' => 'array',
@@ -43,7 +43,7 @@
             'title' => __('All in one button', 'tmm_addthis'),
             'description' => '',
             'css_class' => 'button_above',
-                ), TMM_APP_CARDEALER_PREFIX);
+                ));
         ?>	
     </div>
     
@@ -60,7 +60,7 @@
                     'title' => __('Facebook', 'tmm_addthis'),
                     'description' => '',
                     'css_class' => 'addthis_button_facebook_like',
-                        ), TMM_APP_CARDEALER_PREFIX);
+                        ));
                 ?>
                
             </li>
@@ -74,7 +74,7 @@
                     'title' => __('Twitter', 'tmm_addthis'),
                     'description' => '',
                     'css_class' => 'addthis_button_tweet',
-                        ), TMM_APP_CARDEALER_PREFIX);
+                        ));
                 ?>
                
             </li>
@@ -88,7 +88,7 @@
                     'title' => __('Pinterest', 'tmm_addthis'),
                     'description' => '',
                     'css_class' => 'addthis_button_pinterest',
-                        ), TMM_APP_CARDEALER_PREFIX);
+                        ));
                 ?>
                 
             </li>
@@ -102,7 +102,7 @@
                     'title' => __('Google', 'tmm_addthis'),
                     'description' => '',
                     'css_class' => 'addthis_button_google_plusone',
-                        ), TMM_APP_CARDEALER_PREFIX);
+                        ));
                 ?>
                 
             </li>
@@ -116,7 +116,7 @@
                     'title' => __('Share', 'tmm_addthis'),
                     'description' => '',
                     'css_class' => 'addthis_counter',
-                        ), TMM_APP_CARDEALER_PREFIX);
+                        ));
                 ?>
                 
             </li>
@@ -136,7 +136,7 @@
                     'title' => __('Single Car Page', 'tmm_addthis'),
                     'description' => '',
                     'css_class' => 'addthis_counter',
-                        ), TMM_APP_CARDEALER_PREFIX);
+                        ));
                 ?>
                 <?php
                 TMM_OptionsHelper::draw_theme_option(array(
@@ -147,7 +147,7 @@
                     'title' => __('Single Blog Page', 'tmm_addthis'),
                     'description' => '',
                     'css_class' => 'addthis_counter',
-                        ), TMM_APP_CARDEALER_PREFIX);
+                        ));
                 ?>
         </div>
     
