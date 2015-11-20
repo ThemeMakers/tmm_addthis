@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ThemeMakers AddThis\n"
-"POT-Creation-Date: 2015-10-23 00:24+0200\n"
-"PO-Revision-Date: 2015-10-23 00:25+0200\n"
+"POT-Creation-Date: 2015-11-20 22:50+0100\n"
+"PO-Revision-Date: 2015-11-20 22:51+0100\n"
 "Last-Translator: Alex TM <support@webtemplatemasters.com>\n"
 "Language-Team: Alex TM <support@webtemplatemasters.com>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: index.php\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -20,20 +20,19 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: index.php:115
+#: index.php:110
 msgid "Options have been saved."
 msgstr ""
 
-#. Plugin Name of the plugin/theme
-#: index.php:126 index.php:127
-msgid "ThemeMakers AddThis"
+#: index.php:269
+msgid "Add This Share"
 msgstr ""
 
 #: views/addthis_form.php:4
 msgid "Title"
 msgstr ""
 
-#: views/addthis_form.php:9 views/options_page.php:4
+#: views/addthis_form.php:9
 msgid "Sharing Buttons Type"
 msgstr ""
 
@@ -53,64 +52,56 @@ msgstr ""
 msgid "One Share button"
 msgstr ""
 
-#: views/addthis_form.php:70 views/options_page.php:50
+#: views/addthis_form.php:70 views/theme_options_tab.php:45
 msgid "Disable and Select buttons"
 msgstr ""
 
-#: views/addthis_form.php:82 views/options_page.php:60
+#: views/addthis_form.php:82 views/theme_options_tab.php:55
 msgid "Facebook"
 msgstr ""
 
-#: views/addthis_form.php:94 views/options_page.php:74
+#: views/addthis_form.php:94 views/theme_options_tab.php:69
 msgid "Twitter"
 msgstr ""
 
-#: views/addthis_form.php:107 views/options_page.php:88
+#: views/addthis_form.php:107 views/theme_options_tab.php:83
 msgid "Pinterest"
 msgstr ""
 
-#: views/addthis_form.php:120 views/options_page.php:102
+#: views/addthis_form.php:120 views/theme_options_tab.php:97
 msgid "Google"
 msgstr ""
 
-#: views/addthis_form.php:132 views/options_page.php:116
+#: views/addthis_form.php:132 views/theme_options_tab.php:111
 msgid "Share"
 msgstr ""
 
-#: views/options_page.php:3
-msgid "ThemeMakers Add This Share"
-msgstr ""
-
-#: views/options_page.php:13
+#: views/theme_options_tab.php:8
 msgid "Large toolbox"
 msgstr ""
 
-#: views/options_page.php:23
+#: views/theme_options_tab.php:18
 msgid "Middle toolbox"
 msgstr ""
 
-#: views/options_page.php:33
+#: views/theme_options_tab.php:28
 msgid "Small toolbox"
 msgstr ""
 
-#: views/options_page.php:43
+#: views/theme_options_tab.php:38
 msgid "All in one button"
 msgstr ""
 
-#: views/options_page.php:127
-msgid "Show AddThis on"
+#: views/theme_options_tab.php:122
+msgid "Show AddThis on:"
 msgstr ""
 
-#: views/options_page.php:136
+#: views/theme_options_tab.php:131
 msgid "Single Car Page"
 msgstr ""
 
-#: views/options_page.php:147
+#: views/theme_options_tab.php:142
 msgid "Single Blog Page"
-msgstr ""
-
-#: views/options_page.php:155
-msgid "Save All Changes"
 msgstr ""
 
 #: widget/addthis_widget.php:8
@@ -123,6 +114,10 @@ msgstr ""
 
 #: widget/addthis_widget.php:11
 msgid "Social Share"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "ThemeMakers AddThis"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
