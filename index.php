@@ -5,7 +5,7 @@
  * Plugin URI: http://webtemplatemasters.com
  * Description: ThemeMakers WordPress AddThis Share
  * Author: ThemeMakers
- * Version: 1.0.7
+ * Version: 1.0.8
  * Author URI: http://themeforest.net/user/ThemeMakers
  * Text Domain: tmm_addthis
  */
@@ -67,35 +67,36 @@ if (!class_exists('TMM_AddThis_Controller')) {
             register_widget('ThemeMakers_AddThis_Widget');
         }
 
-        public static  function addthis_shortcode($atts, $content = '') {
-	        if (!isset($atts['buttons_type'])) {
-		        $atts['buttons_type'] = TMM::get_option('buttons_type');
-	        }
-	        if (!isset($atts['add_buttons'])) {
-		        $atts['add_buttons'] = TMM::get_option('add_buttons');
-	        }
+	    public static function addthis_shortcode( $atts, $content = '' ) {
+		    if ( !isset( $atts['buttons_type'] ) ) {
+			    $atts['buttons_type'] = TMM::get_option( 'buttons_type' );
+		    }
 
-	        $show_buttons = TMM::get_option('show_buttons');
-	        $post_type = get_post_type();
+		    if ( !isset( $atts['add_buttons'] ) ) {
+			    $atts['add_buttons'] = TMM::get_option( 'add_buttons' );
+		    }
 
-	        if ($post_type === 'post') {
+		    $show_buttons = TMM::get_option( 'show_buttons' );
+		    $post_type    = get_post_type();
 
-		        if (isset( $show_buttons['single_blog'] ) && $show_buttons['single_blog'] === '0') {
-			        return '';
-		        }
+		    if ( $post_type === 'post' ) {
 
-	        }
+			    if ( isset( $show_buttons['single_blog'] ) && $show_buttons['single_blog'] === '0' ) {
+				    return '';
+			    }
 
-	        if (class_exists('TMM_Ext_PostType_Car') && $post_type === TMM_Ext_PostType_Car::$slug) {
+		    }
 
-		        if (isset( $show_buttons['single_car'] ) && $show_buttons['single_car'] === '0') {
-			        return '';
-		        }
+		    if ( class_exists( 'TMM_Ext_PostType_Car' ) && $post_type === TMM_Ext_PostType_Car::$slug ) {
 
-	        }
+			    if ( isset( $show_buttons['single_car'] ) && $show_buttons['single_car'] === '0' ) {
+				    return '';
+			    }
 
-	        echo TMM_AddThis_Controller::draw_free_page(TMM_AddThis_Controller::get_application_path() . '/views/output.php', $atts);
-        }
+		    }
+
+		    echo TMM_AddThis_Controller::draw_free_page( TMM_AddThis_Controller::get_application_path() . '/views/output.php', $atts );
+	    }
 
         public function save_settings() {
             $data = array();
@@ -133,7 +134,7 @@ if (!class_exists('TMM_AddThis_Controller')) {
         }
 
         public function enqueue_scripts() {
-            wp_register_script('tmm_addthis_widget', 'http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f3c188f442f3bf2', array(), false, true);
+            wp_register_script('tmm_addthis_widget', 'https://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f3c188f442f3bf2', array(), false, true);
 
 	        global $post;
 
