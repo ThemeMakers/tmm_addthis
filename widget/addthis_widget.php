@@ -5,10 +5,10 @@ class ThemeMakers_AddThis_Widget extends WP_Widget {
 	public $defaults;
 
     function __construct() {
-        $settings = array('classname' => __CLASS__, 'description' => __('Displays share buttons.', 'tmm_addthis'));
-        parent::__construct(__CLASS__, __('TMM Add This', 'tmm_addthis'), $settings);
+        $settings = array('classname' => __CLASS__, 'description' => esc_html__('Displays share buttons.', 'tmm_addthis'));
+        parent::__construct(__CLASS__, esc_html__('TMM Add This', 'tmm_addthis'), $settings);
 	    $this->defaults = array(
-		    'title' => __('Social Share', 'tmm_addthis'),
+		    'title' => esc_html__('Social Share', 'tmm_addthis'),
 		    'bt_type' => array(),
 		    'addthis_button_facebook' => 'true',
 		    'addthis_button_tweet' => 'true',

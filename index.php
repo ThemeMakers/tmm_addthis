@@ -5,7 +5,7 @@
  * Plugin URI: http://webtemplatemasters.com
  * Description: ThemeMakers WordPress AddThis Share
  * Author: ThemeMakers
- * Version: 1.0.8
+ * Version: 1.0.9
  * Author URI: http://themeforest.net/user/ThemeMakers
  * Text Domain: tmm_addthis
  */
@@ -68,11 +68,14 @@ if (!class_exists('TMM_AddThis_Controller')) {
         }
 
 	    public static function addthis_shortcode( $atts, $content = '' ) {
-		    if ( !isset( $atts['buttons_type'] ) ) {
+
+		    $atts = array();
+
+		    if ( ! isset( $atts['buttons_type'] ) ) {
 			    $atts['buttons_type'] = TMM::get_option( 'buttons_type' );
 		    }
 
-		    if ( !isset( $atts['add_buttons'] ) ) {
+		    if ( ! isset( $atts['add_buttons'] ) ) {
 			    $atts['add_buttons'] = TMM::get_option( 'add_buttons' );
 		    }
 
@@ -108,7 +111,7 @@ if (!class_exists('TMM_AddThis_Controller')) {
                     self::update_option($key, $value);
                 }
             }
-            _e('Options have been saved.', 'tmm_addthis');
+            esc_html_e('Options have been saved.', 'tmm_addthis');
             exit;
         }
 
@@ -267,7 +270,7 @@ function tmm_addthis_add_settings_tab() {
 			);
 
 			$sections = array(
-				'name' => __("Add This Share", 'tmm_addthis'),
+				'name' => esc_html__("Add This Share", 'tmm_addthis'),
 				'css_class' => 'shortcut-plugins',
 				'show_general_page' => true,
 				'content' => $content,

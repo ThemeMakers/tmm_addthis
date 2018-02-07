@@ -5,7 +5,7 @@
 		'name'          => 'buttons_type[large_toolbox_above]',
 		'type'          => 'checkbox',
 		'default_value' => 0,
-		'title'         => __( 'Large toolbox', 'tmm_addthis' ),
+		'title'         => esc_html__( 'Large toolbox', 'tmm_addthis' ),
 		'description'   => '',
 		'css_class'     => 'large_toolbox_above',
 	));
@@ -15,7 +15,7 @@
 		'name'          => 'buttons_type[fb_tw_p1_sc_above]',
 		'type'          => 'checkbox',
 		'default_value' => 1,
-		'title'         => __( 'Middle toolbox', 'tmm_addthis' ),
+		'title'         => esc_html__( 'Middle toolbox', 'tmm_addthis' ),
 		'description'   => '',
 		'css_class'     => 'fb_tw_p1_sc_above',
 	));
@@ -25,7 +25,7 @@
 		'name'          => 'buttons_type[small_toolbox_above]',
 		'type'          => 'checkbox',
 		'default_value' => 0,
-		'title'         => __( 'Small toolbox', 'tmm_addthis' ),
+		'title'         => esc_html__( 'Small toolbox', 'tmm_addthis' ),
 		'description'   => '',
 		'css_class'     => 'small_toolbox_above',
 	));
@@ -35,14 +35,14 @@
 		'name'          => 'buttons_type[button_above]',
 		'type'          => 'checkbox',
 		'default_value' => 0,
-		'title'         => __( 'All in one button', 'tmm_addthis' ),
+		'title'         => esc_html__( 'All in one button', 'tmm_addthis' ),
 		'description'   => '',
 		'css_class'     => 'button_above',
 	));
 	?>
 </div>
 
-<h3><?php _e( 'Disable and Select buttons', 'tmm_addthis' ); ?></h3>
+<h3><?php esc_html_e( 'Disable and Select buttons', 'tmm_addthis' ); ?></h3>
 <div class="addthis_own_buttons">
 	<ul class="list clearfix">
 		<li>
@@ -52,7 +52,7 @@
 				'name'          => 'add_buttons[addthis_button_facebook_like]',
 				'type'          => 'checkbox',
 				'default_value' => 1,
-				'title'         => __( 'Facebook', 'tmm_addthis' ),
+				'title'         => esc_html__( 'Facebook', 'tmm_addthis' ),
 				'description'   => '',
 				'css_class'     => 'addthis_button_facebook_like',
 			));
@@ -66,7 +66,7 @@
 				'name'          => 'add_buttons[addthis_button_tweet]',
 				'type'          => 'checkbox',
 				'default_value' => 1,
-				'title'         => __( 'Twitter', 'tmm_addthis' ),
+				'title'         => esc_html__( 'Twitter', 'tmm_addthis' ),
 				'description'   => '',
 				'css_class'     => 'addthis_button_tweet',
 			));
@@ -80,7 +80,7 @@
 				'name'          => 'add_buttons[addthis_button_pinterest]',
 				'type'          => 'checkbox',
 				'default_value' => 1,
-				'title'         => __( 'Pinterest', 'tmm_addthis' ),
+				'title'         => esc_html__( 'Pinterest', 'tmm_addthis' ),
 				'description'   => '',
 				'css_class'     => 'addthis_button_pinterest',
 			));
@@ -94,7 +94,7 @@
 				'name'          => 'add_buttons[addthis_button_google_plusone]',
 				'type'          => 'checkbox',
 				'default_value' => 1,
-				'title'         => __( 'Google', 'tmm_addthis' ),
+				'title'         => esc_html__( 'Google', 'tmm_addthis' ),
 				'description'   => '',
 				'css_class'     => 'addthis_button_google_plusone',
 			));
@@ -108,7 +108,7 @@
 				'name'          => 'add_buttons[addthis_counter]',
 				'type'          => 'checkbox',
 				'default_value' => 1,
-				'title'         => __( 'Share', 'tmm_addthis' ),
+				'title'         => esc_html__( 'Share', 'tmm_addthis' ),
 				'description'   => '',
 				'css_class'     => 'addthis_counter',
 			));
@@ -119,7 +119,7 @@
 
 </div>
 
-<h3><?php _e( 'Show AddThis on:', 'tmm_addthis' ); ?></h3>
+<h3><?php esc_html_e( 'Show AddThis on:', 'tmm_addthis' ); ?></h3>
 
 <div class="show_buttons_on">
 	<?php
@@ -128,7 +128,7 @@
 		'name'          => 'show_buttons[single_car]',
 		'type'          => 'checkbox',
 		'default_value' => 1,
-		'title'         => __( 'Single Car Page', 'tmm_addthis' ),
+		'title'         => esc_html__( 'Single Car Page', 'tmm_addthis' ),
 		'description'   => '',
 		'css_class'     => 'addthis_counter',
 	));
@@ -139,7 +139,7 @@
 		'name'          => 'show_buttons[single_blog]',
 		'type'          => 'checkbox',
 		'default_value' => 1,
-		'title'         => __( 'Single Blog Page', 'tmm_addthis' ),
+		'title'         => esc_html__( 'Single Blog Page', 'tmm_addthis' ),
 		'description'   => '',
 		'css_class'     => 'addthis_counter',
 	));
