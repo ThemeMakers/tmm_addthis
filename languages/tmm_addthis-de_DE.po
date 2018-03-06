@@ -106,11 +106,11 @@ msgstr "Einzelseite"
 
 #: widget/addthis_widget.php:8
 msgid "Displays share buttons."
-msgstr "24/7 Cars & Parts fügen Sie diese Schaltflächen Freigabetyp"
+msgstr "TMM Cars & Parts fügen Sie diese Schaltflächen Freigabetyp"
 
 #: widget/addthis_widget.php:9
 msgid "TMM Add This"
-msgstr "24/7 Add This"
+msgstr "TMM Add This"
 
 #: widget/addthis_widget.php:11
 msgid "Social Share"
@@ -118,7 +118,7 @@ msgstr "Soziales Teilen"
 
 #. Plugin Name of the plugin/theme
 msgid "ThemeMakers AddThis"
-msgstr "24/7 Cars & Parts AddThis"
+msgstr "ThemeMakers AddThis"
 
 #. Plugin URI of the plugin/theme
 msgid "http://webtemplatemasters.com"
@@ -137,7 +137,7 @@ msgid "http://themeforest.net/user/ThemeMakers"
 msgstr "http://themeforest.net/user/Thememakers"
 
 #~ msgid "ThemeMakers Add This Share"
-#~ msgstr "24/7 Cars & Parts hinzufügen Dieses Teilen"
+#~ msgstr "ThemeMakers hinzufügen Dieses Teilen"
 
 #~ msgid "Show AddThis on"
 #~ msgstr "AddThis auf anzeigen:"
